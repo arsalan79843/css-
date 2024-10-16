@@ -1,0 +1,568 @@
+Assignment 1: Selectors and Properties
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+        p { color: green; }
+        .highlight { background-color: yellow; }
+        #title { color: blue; }
+        a[target="_blank"] { color: red; }
+        a:hover { text-decoration: underline; }
+        p::first-letter { font-size: 200%; color: red; }
+    </style>
+</head>
+<body>
+    <h1 id="title">CSS Selectors</h1>
+    <p>This is a <span class="highlight">highlighted</span> paragraph.</p>
+    <a href="#" target="_blank">Click me</a>
+</body>
+</html>
+
+Assignment 2: Color and Backgrounds
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colors & Backgrounds</title>
+    <style>
+        body { background-color: lightblue; }
+        h1 { color: #333; }
+        .gradient { background: linear-gradient(to right, red, yellow); padding: 20px; }
+        .image { background-image: url('bg.jpg'); height: 200px; }
+    </style>
+</head>
+<body>
+    <h1>Colors & Backgrounds</h1>
+    <div class="gradient">Gradient background</div>
+    <div class="image">Image background</div>
+</body>
+</html>
+
+Assignment 3: Typography
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typography</title>
+    <style>
+        body { font-family: Arial; line-height: 1.6; }
+        h1 { font-family: Georgia; text-transform: uppercase; }
+        p { font-size: 16px; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Typography</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+
+Assignment 4: Box Model
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        .box { width: 200px; padding: 20px; border: 5px solid blue; background-color: lightgray; }
+        .border-box { box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <div class="box">Content box</div>
+    <div class="box border-box">Border box</div>
+</body>
+</html>
+
+Assignment 5: Flexbox Basics
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <style>
+        .flex { display: flex; justify-content: space-around; align-items: center; height: 200px; }
+        .item { background-color: blue; color: white; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>
+
+Assignment 6: Advanced Flexbox
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 300px;
+        }
+        .item {
+            flex: 1 1 30%;
+            margin: 10px;
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+        .order-1 { order: 1; }
+        .order-2 { order: 2; }
+        .order-3 { order: 3; }
+    </style>
+</head>
+<body>
+    <h1>Advanced Flexbox Layout</h1>
+    <div class="container">
+        <div class="item order-1">Item 1</div>
+        <div class="item order-2">Item 2</div>
+        <div class="item order-3">Item 3</div>
+        <div class="item order-2">Item 4</div>
+        <div class="item order-1">Item 5</div>
+    </div>
+</body>
+</html>
+
+Assignment 7: Grid Basics
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Basics</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+        }
+        .grid-item {
+            background-color: lightgreen;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout Example</h1>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>
+
+Assignment 8: Advanced Grid
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "sidebar content content"
+                "footer footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+        }
+        .header { grid-area: header; background-color: lightcoral; }
+        .sidebar { grid-area: sidebar; background-color: lightblue; }
+        .content { grid-area: content; background-color: lightgreen; }
+        .footer { grid-area: footer; background-color: lightgray; }
+    </style>
+</head>
+<body>
+    <h1>Advanced Grid Layout</h1>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content Area</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
+
+Assignment 9: Media Queries
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Design</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { font-size: 24px; }
+        
+        @media (max-width: 600px) {
+            body { background-color: lightyellow; }
+            h1 { font-size: 18px; }
+        }
+
+        @media (min-width: 601px) and (max-width: 900px) {
+            body { background-color: lightblue; }
+            h1 { font-size: 20px; }
+        }
+
+        @media (min-width: 901px) {
+            body { background-color: lightgreen; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Webpage</h1>
+</body>
+</html>
+
+Assignment 10: Responsive Images
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Images</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Images</h1>
+    <img src="image-small.jpg" srcset="image-medium.jpg 600w, image-large.jpg 1200w" alt="Responsive Image">
+</body>
+</html>
+
+Assignment 11: Positioning
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning</title>
+    <style>
+        .static { position: static; background: lightcoral; }
+        .relative { position: relative; top: 20px; background: lightblue; }
+        .absolute { position: absolute; top: 50px; left: 50px; background: lightgreen; }
+        .fixed { position: fixed; bottom: 10px; right: 10px; background: lightpink; }
+        .sticky { position: sticky; top: 0; background: lightgray; }
+    </style>
+</head>
+<body>
+    <h1>Positioning Example</h1>
+    <div class="static">Static Position</div>
+    <div class="relative">Relative Position</div>
+    <div class="absolute">Absolute Position</div>
+    <div class="fixed">Fixed Position</div>
+    <div class="sticky">Sticky Position</div>
+</body>
+</html>
+
+Assignment 12: Z-Index
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Z-Index Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .box1 { background: lightcoral; z-index: 1; }
+        .box2 { background: lightblue; z-index: 2; top: 30px; left: 30px; }
+        .box3 { background: lightgreen; z-index: 3; top: 60px; left: 60px; }
+    </style>
+</head>
+<body>
+    <h1>Z-Index Example</h1>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>
+
+Assignment 13: Transitions
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transitions</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+        }
+        .box:hover {
+            background-color: lightcoral;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transitions</h1>
+    <div class="box"></div>
+</body>
+</html>
+
+Assignment 14: Animations
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+    <style>
+        @keyframes example {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100px); }
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightgreen;
+            animation: example 2s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animations</h1>
+    <div class="box"></div>
+</body>
+</html>
+
+Assignment 15: Transforms
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Transforms</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            margin: 20px;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+        .box:hover {
+            transform: translate(20px, 20px) rotate(45deg) scale(1.2) skew(10deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transforms</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>
+
+Assignment 16: Pseudo-Classes and Pseudo-Elements
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-Classes & Pseudo-Elements</title>
+    <style>
+        button {
+            background-color: lightgray;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        button:hover {
+            background-color: lightblue;
+        }
+        button:focus {
+            outline: 2px solid blue;
+        }
+        button::after {
+            content: ' ✔';
+            color: green;
+            display: none;
+        }
+        button:active::after {
+            display: inline;
+        }
+        .list-item:nth-child(odd) {
+            background: lightgray;
+        }
+        .list-item:nth-child(even) {
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Classes and Pseudo-Elements</h1>
+    <button>Click Me</button>
+    <ul>
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+        <li class="list-item">Item 4</li>
+    </ul>
+</body>
+</html>
+
+Assignment 17: Styling Forms
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Forms</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        input, select, textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: blue;
+            outline: none;
+        }
+        .error { border-color: red; }
+    </style>
+</head>
+<body>
+    <h1>Styled Forms</h1>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <select>
+            <option>Select your option</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+        <textarea rows="4" placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+Assignment 18: CSS Variables
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables</title>
+    <style>
+        :root {
+            --main-color: lightblue;
+            --padding: 10px;
+            --border-radius: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .box {
+            background-color: var(--main-color);
+            padding: var(--padding);
+            border-radius: var(--border-radius);
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Variables Example</h1>
+    <div class="box">This box uses CSS variables.</div>
+</body>
+</html>
+
+Assignment 19: Using a CSS Framework (Bootstrap Example)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Bootstrap Layout</h1>
+        <div class="row">
+            <div class="col-md-4">Column 1</div>
+            <div class="col-md-4">Column 2</div>
+            <div class="col-md-4">Column 3</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+Assignment 20: Building a Custom CSS Framework
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom CSS Framework</title>
+    <style>
+        /* Custom CSS Framework */
+        .container { max-width: 1200px; margin: 0 auto; }
+        .row { display: flex; flex-wrap: wrap; margin: -10px; }
+        .col-1 { flex: 0 0 8.33%; padding: 10px; }
+        .col-2 { flex: 0 0 16.66%; padding: 10px; }
+        .col-3 { flex: 0 0 25%; padding: 10px; }
+        .col-4 { flex: 0 0 33.33%; padding: 10px; }
+        .col-6 { flex: 0 0 50%; padding: 10px; }
+        .col-12 { flex: 0 0 100%; padding: 10px; }
+        .btn { padding: 10px 20px; background-color: lightblue; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Custom CSS Framework Example</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">Column 1</div>
+            <div class="col-4">Column 2</div>
+            <div class="col-4">Column 3</div>
+        </div>
+        <button class="btn">Custom Button</button>
+    </div>
+</body>
+</html>
